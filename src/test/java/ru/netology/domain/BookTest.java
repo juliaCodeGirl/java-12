@@ -10,7 +10,6 @@ class BookTest {
     @Test
     void  shouldMatchByAuthor() {
         String authorBook = "Пушкин";
-        book.matches(authorBook);
 
         assertTrue(book.matches(authorBook));
     }
@@ -18,7 +17,6 @@ class BookTest {
     @Test
     void  shouldMatchNotExistingByAuthor() {
         String authorBook = "Гоголь";
-        book.matches(authorBook);
 
         assertFalse(book.matches(authorBook));
     }
@@ -26,7 +24,6 @@ class BookTest {
     @Test
     void  shouldMatchByName() {
         String authorBook = "Евгений Онегин";
-        book.matches(authorBook);
 
         assertTrue(book.matches(authorBook));
     }
@@ -34,7 +31,6 @@ class BookTest {
     @Test
     void  shouldMatchNotExistingByName() {
         String authorBook = "Мертвые души";
-        book.matches(authorBook);
 
         assertFalse(book.matches(authorBook));
     }

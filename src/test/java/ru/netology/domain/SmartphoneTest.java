@@ -10,7 +10,6 @@ class SmartphoneTest {
     @Test
     void shouldMatchByName() {
         String namePhone = "Redmi";
-        smartphone.matches(namePhone);
 
         assertTrue(smartphone.matches(namePhone));
     }
@@ -18,7 +17,6 @@ class SmartphoneTest {
     @Test
     void shouldMatchByProducer() {
         String producerPhone = "Xiaomi";
-        smartphone.matches(producerPhone);
 
         assertTrue(smartphone.matches(producerPhone));
     }
@@ -26,7 +24,6 @@ class SmartphoneTest {
     @Test
     void shouldMatchNotExistingByProducer() {
         String producerPhone = "Apple";
-        smartphone.matches(producerPhone);
 
         assertFalse(smartphone.matches(producerPhone));
     }
@@ -34,7 +31,6 @@ class SmartphoneTest {
     @Test
     void shouldMatchNotExistingByName() {
         String namePhone = "IPhone";
-        smartphone.matches(namePhone);
 
         assertFalse(smartphone.matches(namePhone));
     }

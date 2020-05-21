@@ -10,8 +10,8 @@ import ru.netology.repository.ProductRepository;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ProductManagerTest {
-    ProductRepository repository = new ProductRepository();
-    ProductManager manager = new ProductManager(repository);
+    private ProductRepository repository = new ProductRepository();
+    private ProductManager manager = new ProductManager(repository);
 
     private Book first = new Book(1, "Война и Мир", 1000, "Толстой");
     private Book second = new Book(2, "Евгений Онегин", 800, "Пушкин");
@@ -51,7 +51,6 @@ class ProductManagerTest {
     @Test
     void shouldNotFindNotExistingBookByName() {
         String nameBook = "Три мушкетера";
-        manager.searchBy(nameBook);
         Product[] expected = new Product[]{};
         Product[] actual = manager.searchBy(nameBook);
 
@@ -61,7 +60,6 @@ class ProductManagerTest {
     @Test
     void shouldNotFindNotExistingBookByAuthor() {
         String authorBook = "Гоголь";
-        manager.searchBy(authorBook);
         Product[] expected = new Product[]{};
         Product[] actual = manager.searchBy(authorBook);
 
@@ -71,7 +69,6 @@ class ProductManagerTest {
     @Test
     void shouldFindExistingPhoneByName() {
         String namePhone = "Phone";
-        manager.searchBy(namePhone);
         Product[] expected = new Product[]{nokia};
         Product[] actual = manager.searchBy(namePhone);
 
@@ -81,7 +78,6 @@ class ProductManagerTest {
     @Test
     void shouldFindExistingPhoneByProducer() {
         String producerPhone = "Xiaomi";
-        manager.searchBy(producerPhone);
         Product[] expected = new Product[]{xiaomi};
         Product[] actual = manager.searchBy(producerPhone);
 
@@ -91,7 +87,6 @@ class ProductManagerTest {
     @Test
     void shouldNotFindNotExistingPhoneByName() {
         String namePhone = "IPhone";
-        manager.searchBy(namePhone);
         Product[] expected = new Product[]{};
         Product[] actual = manager.searchBy(namePhone);
 
@@ -101,7 +96,6 @@ class ProductManagerTest {
     @Test
     void shouldNotFindNotExistingPhoneByProducer() {
         String producerPhone = "FLY";
-        manager.searchBy(producerPhone);
         Product[] expected = new Product[]{};
         Product[] actual = manager.searchBy(producerPhone);
 

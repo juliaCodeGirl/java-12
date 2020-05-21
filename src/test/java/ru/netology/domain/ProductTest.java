@@ -10,7 +10,6 @@ class ProductTest {
     @Test
     void shouldMatchByName() {
         String name = "Война и Мир";
-        product.matches(name);
 
         assertTrue(product.matches(name));
     }
@@ -18,7 +17,6 @@ class ProductTest {
     @Test
     void shouldMatchNotExistingByName(){
         String name = "Три мушкетера";
-        product.matches(name);
 
         assertFalse(product.matches(name));
     }
